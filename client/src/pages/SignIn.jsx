@@ -3,6 +3,7 @@ import { Link, useNavigate} from 'react-router-dom';
 import {Alert, Button, Label, Spinner, TextInput} from 'flowbite-react';
 import { signInStart,signInSuccess,signInFailure } from '../redux/user/userSlice.js';
 import {useDispatch,useSelector} from 'react-redux';
+import OAuth from '../components/OAuth.jsx';
 
 export default function SignIn() {
 //  All hooks are here
@@ -82,6 +83,7 @@ const dispatch = useDispatch();
                 ) : 'Sign In'
               }
             </Button>
+            <OAuth/>
           </form>
           <div className="flex gap-2 mt-5">
             <span>Dont Have an account?</span>
